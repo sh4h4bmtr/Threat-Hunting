@@ -1,0 +1,6 @@
+What is PAExec.exe?
+PAExec is a remote administration tool designed as an alternative to psexec. The tool is a small remote shell that includes functionality for copying files, remote execution, and fully interactive shell sessions with remote Windows machines without the need to install client software.
+PsExec facilitates file and registry access on remote systems, allowing administrators to perform tasks such as copying files, executing scripts, or modifying registry settings.
+PsExec activity always involves remote service creation. The Windows Security EventCode for this activity is 7045 and the default name is PSEXESVC.
+PsExec begins by extracting from its executable image an embedded Windows service called Psexesvc. The service is copied to the Admin$ share of the remote system. Windows Service Control Manager API is then used to have a remote interface with the target computer
+PsExec allows for remote command execution (and receipt of resulting output) over a named pipe with the Server Message Block (SMB) protocol, which runs on TCP port 445.
